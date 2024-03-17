@@ -51,7 +51,7 @@ class _VideoAppState extends State<VideoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Video Demo',
+      title: 'ВКурсе',
       home: Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,

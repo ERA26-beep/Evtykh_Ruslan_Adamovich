@@ -4,11 +4,9 @@ import 'package:video_player/video_player.dart';
 class VideoApp extends StatefulWidget {
   const VideoApp({super.key});
 
-
   @override
   _VideoAppState createState() => _VideoAppState();
 }
-
 
 class _VideoAppState extends State<VideoApp> {
   late VideoPlayerController _videoController;
@@ -20,7 +18,7 @@ class _VideoAppState extends State<VideoApp> {
   }
 
   void _nextVideoPlay(String videoPath) {
-    ///
+
     _startPlay(videoPath);
   }
 
@@ -51,26 +49,39 @@ class _VideoAppState extends State<VideoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'ВКурсе',
+
       home: Scaffold(
+
         body: Column(
+
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             Text("Профиль ВКурсе", style: Theme.of(context).textTheme.headlineMedium),
+
             const SizedBox(height: 10,),
+
             Text("Имя: Шрек, Возраст: 38 лет, Семейное положение: Женат"),
+
             Center(
               child: _videoController.value.isInitialized
                   ? AspectRatio(
                 aspectRatio: _videoController.value.aspectRatio,
                 child: VideoPlayer(_videoController),
               )
+
                   : Container(),
             ),
+
             const SizedBox(height: 50,),
+
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
                 ElevatedButton(
                   onPressed: () {
                     videoIndex = 0;
